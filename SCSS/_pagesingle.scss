@@ -1,0 +1,67 @@
+.breadcrumb{
+    font-size: $font-small;
+    margin-bottom: 2em;
+
+    li:not(:last-child)::after{
+        content: '/';
+        padding: 0 0.35em;
+    }
+    li:last-child{
+        display: block;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        color: $light-text-color;
+
+    }
+
+}
+
+.products.one .item{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.products.one .price .discount{
+   font-size: 1em;
+   font-weight: $fw7;
+   line-height: 1;
+   position: absolute;
+   top: 0;
+   right: 0;
+   bottom: auto;
+   padding: 1em;
+   z-index: 2;
+   background-color: $dark-color;
+   color: $white-color;
+   border-radius: $percent50;
+   margin: 0.5em;
+}
+
+.products.one :where(.big-image, .small-image){
+    overflow: hidden;
+}
+
+.products.one .big-image{
+    position: relative;
+    margin-bottom: 1em;
+}
+
+.products.one :where(.big-image, .small-image) img {
+    object-fit: cover;
+    width: $percent100;
+    height: $percent100;
+    display: block;
+}
+
+
+.products.one .thumbnail-show{
+    position: relative;
+    width: 130px;
+    height: 110px;
+    overflow: hidden;
+    margin: 0 2em 2em 0;
+}
+
+

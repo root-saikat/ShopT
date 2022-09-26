@@ -1,0 +1,150 @@
+.menu-bottom{
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 60px;
+    background-color: $white-color;
+    box-shadow: 0 -2px 10px rgb(0 0 0 / 10%);
+    z-index: 900;
+
+    nav li{
+        flex: 1;
+
+        a{
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 0.5em 0;
+            color: $light-text-color;
+            transition: $trans-color;
+             span{
+                font-size: $font-smaller;
+             }
+
+             i{
+                font-size: 1.25em;
+             }
+        }
+
+        a:hover{
+            color: $dark-color;
+        }
+    }
+
+    .fly-item{
+        position: absolute;
+        right: 50%;
+        width: 16px;
+        height: 16px;
+        border-radius: $percent50;
+        margin-right: -20px;
+        background-color: $secondary-dark-color;
+        // text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+        span{
+            font-size: $font-smaller;
+        }
+    }
+}
+
+
+// search bottom
+
+.search-bottom{
+    position: fixed;
+    bottom: 60px;
+    width: $percent100;
+    padding: 2.5em 0;
+    background-color: $secondary-dark-color;
+    z-index: 1000;
+    visibility: hidden;
+    opacity: 0;
+    will-change: visibility, opacity;
+    
+    .t-close{
+        position: absolute;
+        top: -54px;
+        right: 0;
+        font-size: 1.25em;
+        width: 32px;
+        height: 32px;
+        border-radius: $percent50;
+        background-color: $secondary-dark-color;
+        color: $white-color;
+        transition: $trans-background-color;
+    }
+    .t-close:hover{
+        background-color: $primary-color;
+        opacity: .75;
+    }
+
+
+    form{
+        position: relative;
+    }
+    form.search {
+        input{
+            line-height: 3.25em;
+            padding: 0 7em 0 4.5em;
+            border: 0;
+            outline: 0;
+            width: $percent100;
+            border-radius: 7px;
+            font-size: 0.9em;
+            font-weight: $fw3;  
+        }
+        
+        span, button{
+                position: absolute;
+                top: 0;
+                padding: 0.55em 1.5em;
+                font-size: 1em;
+                color: $light-text-color;
+                height: $percent100;
+            }
+        button{
+            right: 0;
+            border: 0;
+            outline: 0;
+            font-size: 0.875em;
+            font-weight: $fw6;
+            background-color: $primary-color;
+            color: $white-color;
+            border-radius: 0 7px 7px 0;
+            cursor: pointer;
+        }
+        button:hover{
+            background-color: $dark-color;
+        }
+         
+    }
+}
+
+.showsearch .search-bottom{
+    visibility: inherit;
+    opacity: 1;
+}
+
+
+.overlay{
+    position: fixed;
+    width: $percent100;
+    height: $percent100;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    background-color: rgba(0, 0, 0, 0.4);
+    visibility: hidden;
+    opacity: 0;
+    will-change: visibility, opacity;
+}
+
+.showmenu .overlay{
+    opacity: 1;
+    visibility: inherit;
+}

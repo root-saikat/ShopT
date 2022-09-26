@@ -1,0 +1,108 @@
+.products.main .item{
+    flex-direction: column;
+    flex: 0 0 100%;
+    padding: 0 0.938em;
+    padding-bottom: 2em;
+    position: relative;
+}
+
+.products.main .media{
+    height: 390px;
+}
+
+.products.main .footer{
+    position: absolute;
+    left: 0;
+    right: 0;
+    padding: 0 1em 1em;
+    border-radius: 7px;
+    z-index: 1;
+    background: linear-gradient(0deg, $light-bg-color 0%, $white-color 70%);
+    opacity: 0;
+    visibility: hidden;
+    will-change: opacity;
+    transition: all .2s ease-in-out;
+}
+
+.products.main .item:hover .footer {
+    opacity: 1;
+    visibility: visible;
+}
+
+.products.main .footer ul{
+    list-style: disc;
+    padding: 1.25em 0 0 1.25em;
+    line-height: 1.8;
+    border-top: 1px solid $border-color;
+    // margin-top: 145px;
+}
+
+.products.main .item:hover .content > *:not(.footer) {
+    z-index: 3;
+}
+
+.products.main {
+    
+    .rating{
+        display: flex;
+        align-items: center;
+        gap: 0.5em;
+        .stars{
+            width: 80px;
+            height: 20px;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='16' height='16'%3E%3Cpath fill='none' d='M0 0h24v24H0z'/%3E%3Cpath d='M12 18.26l-7.053 3.948 1.575-7.928L.587 8.792l8.027-.952L12 .5l3.386 7.34 8.027.952-5.935 5.488 1.575 7.928z' fill='rgba(241,196,14,1)'/%3E%3C/svg%3E");
+            background-position-y: top; 
+            background-repeat-y: no-repeat;
+
+        }
+    }
+    .hoverable{
+        position: absolute;
+        top: 0;
+        right: 0;
+
+        li a{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 28px;
+            height: 28px;
+            padding: 0.25em;
+            margin: 0.25em;
+            border-radius: $percent50;
+            line-height: 1;
+            background-color: $white-color;
+            opacity: .5;
+            transition: $trans-background-color, opacity .3s;
+        }
+    }
+
+    .item:hover .hoverable li a {
+        opacity: 1;
+    }
+
+    .hoverable li a:hover {
+        color: $white-color;
+        background-color: $dark-color;
+    } 
+
+    .hoverable li.active a:hover{
+        background-color: $primary-color;
+    }
+
+    .hoverable li:not(.active){
+        transform: translateX(100%);
+        opacity: 0;
+        transition: transform .3s, opacity .2s;
+    }
+
+    .item:hover .hoverable li{
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+    .hoverable li:last-child {
+        transition-delay: .1s; 
+    }
+
+}

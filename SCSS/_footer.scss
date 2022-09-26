@@ -1,0 +1,114 @@
+footer {
+
+    form{
+        position: relative;
+    }
+    form.search {
+        input{
+            line-height: 3.25em;
+            padding: 0 7em 0 4.5em;
+            border: 0;
+            outline: 0;
+            width: $percent100;
+            border-radius: 7px;
+            font-size: 0.9em;
+            font-weight: $fw3;  
+        }
+        
+        span, button{
+                position: absolute;
+                top: 0;
+                padding: 0.55em 1.5em;
+                font-size: 1em;
+                color: $light-text-color;
+                height: $percent100;
+            }
+        button{
+            right: 0;
+            border: 0;
+            outline: 0;
+            font-size: 0.875em;
+            font-weight: $fw6;
+            background-color: $primary-color;
+            color: $white-color;
+            border-radius: 0 7px 7px 0;
+            cursor: pointer;
+        }
+        button:hover{
+            background-color: $dark-color;
+        }
+         
+    }
+}
+
+// newsletter
+
+.newsletter{
+    padding: 2.5em 0;
+    background-color: $dark-color;
+    color: $white-color;
+    
+    h3{
+        font-size: 1.5em;
+    }
+    
+    p{
+        font-weight: $fw3;
+        color: $border-color;
+        margin: 0.5em 0 1.5em;
+
+        strong{
+            color: $primary-color;
+        }
+    }
+
+    form{
+        max-width: 500px;
+        width: $percent100;
+    }
+}
+
+// widgets
+
+.widgets {
+    padding: 3.5em 2.5em;
+    background-color: $light-bg-color;
+}
+
+// footer info
+
+.footer-info{
+    padding: 3.5em 0 5em;
+
+    .wrapper .flexcol{
+        align-items: center;
+        gap: 0;
+    }
+
+    ul li a{
+        font-size: 1.25em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        background-color: $light-bg-color;
+        border-radius: $percent50;
+        margin: 0.25em;
+        transition: $trans-background;
+    }
+
+    ul li a:hover{
+        background-color: $border-color;
+    }
+
+    .logo a{
+        margin: 0 0 1em -0.75em;
+
+    }
+
+    .mini-text{
+        margin-top: 2em;
+        text-align: center;
+    }
+}

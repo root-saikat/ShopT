@@ -1,0 +1,185 @@
+*,::before,::after{
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+    -webkit-tap-highlight-color: transparent;
+}
+
+ul{
+    list-style: none;
+}
+
+img{
+    max-width: $percent100;
+    vertical-align: middle;
+}
+
+strong{
+    font-weight: $fw8;
+}
+
+table{
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+input::placeholder {
+  font: inherit;
+}
+
+h1,h2,h3,h4{
+    font-family: 'poppins';
+}
+
+h1{
+    font-size: calc(1.3em + 1vw);
+    font-weight: $fw8;
+    line-height: 1;
+}
+
+h2{
+    font-size: 2.5em;
+}
+
+h3{
+    font-size: 1.2em;
+    font-weight: $fw7;
+}
+
+h4{
+    font-size: 1em;
+    font-weight: $fw6;
+}
+
+.mobile-hide{
+    display: none;
+}
+
+
+.container{
+    max-width: 1280px;
+    margin: 0 auto;
+    padding:0 0.938em ;
+}
+
+.column{
+    margin-left: -0.938em;
+    margin-right: -0.938em;
+    .row{
+        padding:0 0.938em ;
+    }
+}
+
+.flexwrap{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.flexitem{
+    display: flex;
+    align-items: center;
+}
+
+.flexcenter{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flexcol{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.main-links a:hover{
+    color: $secondary-color;
+}
+.second-links a:hover{
+    color: $light-text-color;
+}
+
+.icon-small, .icon-large{
+    display: flex;
+    align-items: center;
+    padding: 0 0.25em;
+    font-weight: normal;
+} 
+
+.icon-small{
+    font-size: 1.25em;
+    margin-left: auto;
+}
+
+.icon-large{
+    font-size: 1.75em;
+    padding: 0 0.75em 0 0;
+}
+
+.object-cover img{
+   position: absolute;
+   object-fit: cover;
+   width: $percent100;
+   height: $percent100;
+   display: block;
+}
+
+.products .media{
+    position: relative;
+    flex-shrink: 0;
+    overflow: hidden;
+}
+
+
+.primary-button, .secondary-button, .light-button {
+   font-size: $font-small;
+   padding: 0.9em 2em;
+   height: auto;
+   width: fit-content;
+   border-radius: 2em;
+   transition: $trans-background-color;
+}
+
+.primary-button{
+    background-color: $primary-color;
+    color: $white-color;
+}
+
+.primary-button:hover{
+    background-color: $dark-color;
+}
+
+.secondary-button{
+    background-color: $secondary-dark-color;
+    color: $white-color;
+}
+
+.secondary-button:hover{
+    background-color: $light-bg-color;
+    color: $secondary-dark-color;
+}
+
+.light-button{
+    background-color: $light-bg-color;
+}
+
+.light-button:hover{
+    background-color: $secondary-dark-color;
+    color: $white-color;
+}
+
+
+.view-all{
+    font-size: $font-small;
+    display: flex;
+    gap: 1em;
+    transition: $trans-color;
+}
+
+.mini-text{
+    font-size: $font-smaller;
+    color: $light-text-color;
+}

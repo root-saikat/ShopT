@@ -1,0 +1,16 @@
+.brands {
+    .wrapper{
+        justify-content: space-around;
+        flex-wrap: wrap;
+        padding: 2em 0;
+    }
+    .item img{
+        opacity: .25;
+        transition: opacity .3s;
+    }
+
+    .item a:hover img{
+        opacity: 1;
+    }
+    
+}

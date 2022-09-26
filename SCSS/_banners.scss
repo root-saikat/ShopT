@@ -1,0 +1,71 @@
+.banners{
+    .item{
+        position: relative;
+        background-color: $white-color;
+        border: 1px solid $border-color;
+    }
+}
+
+.banner {
+    .image{
+        text-align: right;
+    }
+
+    .get-gray{
+        background-color: $border-color; 
+    }
+
+    :where(.text-content, .overlink){
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: $percent100;
+        height: $percent100;
+    }
+
+    .text-content{
+        padding: 1.5em 2.5em; 
+    }
+
+    h3{
+        font-size: calc(1em + 0.5vw);
+        font-weight: $fw3;
+
+        span{
+            font-size: 80%;
+            color: $light-text-color;
+        }
+    }
+
+    .primary-button{
+        z-index: 3;
+    }
+}
+
+
+// product-categories
+
+.product-categories .item{
+    display: flex;
+    padding: 1.5em;
+    border: 1px solid $border-color;
+}
+
+.product-categories .image{
+    max-width: 150px;
+}
+
+.mini-links ul {
+  font-size: $font-small;
+  color: $light-text-color;
+  margin-top: 1em;
+}
+
+.banners .second-links{
+    margin-top: 2em;
+}
+
+.mini-links li a:hover{
+    text-decoration: underline;
+    
+}
