@@ -196,16 +196,16 @@
         // }
 
         .beauty ul{
-            background-image: url(assets/menu/menu_bg1.jpg);
+            background-image: url(/assets/menu/menu_bg1.jpg);
         }
         .electronics ul{
-            background-image: url(assets/menu/menu_bg2.jpg);
+            background-image: url(/assets/menu/menu_bg2.jpg);
         }
         .fashion ul{
-            background-image: url(assets/menu/menu_bg3.jpg);
+            background-image: url(/assets/menu/menu_bg3.jpg);
         }
         .homekit .mega{
-            background-image: url(assets/menu/menu_bg4.jpg);
+            background-image: url(/assets/menu/menu_bg4.jpg);
         }
 
         .has-child > :where(ul, .mega)::before{
