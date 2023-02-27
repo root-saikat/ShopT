@@ -4,7 +4,7 @@ function copyMenu(){
     var dptCategory = document.querySelector('.dpt-cat');
     var dptPlace = document.querySelector('.departments');
     dptPlace.innerHTML = dptCategory.innerHTML;
-     
+    
     // copy inside nav to nav
     var mainNav = document.querySelector('.header-nav nav');
     var navPlace = document.querySelector('.off-canvas nav');
@@ -20,9 +20,9 @@ copyMenu();
 
 // show mobile menu 
 
-const menuButton = document.querySelector('.trigger'),
-      closeButton = document.querySelector('.t-close'),
-      addclass = document.querySelector('.site');
+const menuButton = document.querySelector('.trigger'), 
+    closeButton = document.querySelector('.t-close'),
+    addclass = document.querySelector('.site');
 
 menuButton.addEventListener('click', function(){
     addclass.classList.toggle('showmenu')
@@ -50,12 +50,11 @@ function toggle(e) {
 // slider js
 const swiper = new Swiper('.swiper', {
     loop: true,
-  
     //  pagination
     pagination: {
-      el: '.swiper-pagination',
+    el: '.swiper-pagination',
     },
-  
+
   });
 
 
@@ -77,7 +76,7 @@ tClose.addEventListener('click', function(){
 // show dpt menu
 
 const dptButton = document.querySelector('.dpt-cat .dpt-trigger'),
-      dptClass = document.querySelector('.site');
+    dptClass = document.querySelector('.site');
 
 dptButton.addEventListener('click', function(){
     dptClass.classList.toggle('showdpt')
@@ -86,7 +85,7 @@ dptButton.addEventListener('click', function(){
 
 // product img slider
 
-var productThumb = new swiper ('.small-image', {
+var productThumb = new Swiper ('.small-image', {
     loop: true,
     spaceBetween:10,
     slidesPerView:3,
@@ -100,7 +99,7 @@ var productThumb = new swiper ('.small-image', {
     }
 });
 
-var productBig = new swiper('.big-image',{
+var productBig = new Swiper('.big-image',{
     loop:true,
     autoHeight:true,
     navigation:{
@@ -115,5 +114,3 @@ var productBig = new swiper('.big-image',{
 
 
 
-
-      

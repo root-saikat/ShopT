@@ -16,7 +16,9 @@
     }
 
 }
-
+.products.one .image-show{
+    height: 400px;
+}
 .products.one .item{
     display: flex;
     flex-direction: column;
@@ -49,19 +51,275 @@
 }
 
 .products.one :where(.big-image, .small-image) img {
-    object-fit: cover;
+    object-fit: contain;
     width: $percent100;
     height: $percent100;
     display: block;
 }
-
+.products.one .small-image img{
+    object-fit: cover;
+}
 
 .products.one .thumbnail-show{
     position: relative;
-    width: 130px;
+    width: 180px;
     height: 110px;
     overflow: hidden;
-    margin: 0 2em 2em 0;
+    // margin: 0 2em 2em 0;
+}
+
+.small-image-wrapper.flexitem.swiper-wrapper {
+    justify-content: space-between;
 }
 
 
+.stars i{
+    color: yellowgreen;
+}
+.ratings {
+    display: flex;
+    gap: 20px;
+    margin-top: 22px;
+}
+.normal {
+    text-decoration: line-through;
+    color: #716868d9;
+}
+
+.products.one .price .current{
+    font-size: 2.5em;
+    color: $primary-color;
+}
+.products.one .item .content {
+    display: grid;
+    gap: 20px;
+}
+.products .varient form{
+    display: flex;
+}
+
+.products .varient form p{
+    position: relative;
+    margin: 0 0.5em 0.5em;
+}
+
+.products :where(.varient, .actions) .circle{
+    display: block;
+    position: static;
+    top: 0;
+    margin: 0;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.products .varient input{
+    clip: rect(0,0,0,0);
+    overflow: hidden;
+    position: absolute;
+    height: 0;
+    width: 0;
+}
+.products .varient label::before{
+    opacity: 1;
+}
+
+.products .varient label[for="cogrey"]::before{
+    background: #576574;
+}
+.products .varient label[for="coblue"]::before{
+    background: #45a0ff;
+}
+.products .varient label[for="cogreen"]::before{
+    background: #1dd1a1;
+}
+
+.single-product .varient form p input:checked + label{
+    background-color: transparent;
+    border: 2px solid  $dark-color;
+    color: $white-color;
+}
+
+.products .Sizes .varient label::before{
+    background-color: var(--white-color);
+}
+
+.products .Sizes .varient label span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 0.85em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.single-product .Sizes .varient form p input:checked + label::before{
+    background-color: $dark-color;
+    opacity: 1;
+}
+
+.products .actions{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top:2em;
+}
+
+.products .qty-control{
+    width: fit-content;
+    padding: 0.5em;
+    border: 1px solid $border-color;
+    margin: 0 2em 2em 0;
+}
+
+.products .actions :where(input, button){
+    font-size: 1.25em;
+    outline: 0;
+    border: 0;
+}
+
+.products .actions input{
+    width: 50px;
+    text-align: center;
+}
+
+.products .qty-control button::before{
+    background-color: transparent;
+}
+
+.products .actions .button-cart{
+    flex: 1;
+    min-width: 200px;
+}
+
+.products .actions .button-cart button{
+    width: 100%;
+    cursor: pointer;
+}
+
+.wish-share a{
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    font-weight: $fw7;
+    margin: 1em 2em 1em 0;
+    transition: $trans-color;
+}
+
+.products .collapse .has-child > a{
+    position: relative;
+    font-size: $fw7;
+    text-transform: uppercase;
+    padding: 1em 1.25em;
+    border-top: 1px solid $border-color;
+}
+
+.products .collapse .has-child > a::before{
+    content: '+';
+    position: absolute;
+    left: 0;
+}
+
+.products .collapse .content{
+    margin: 0 0 1.5em 2em;
+    font-size: $font-small;
+}
+
+.products .collapse .content li span:first-child{
+    min-width: 100px;
+    display: inline-flex;
+    font-weight: $fw7;
+    text-transform: uppercase;
+}
+
+.products .collapse table{
+    line-height: 3em;
+}
+
+.products .collapse table thead th{
+    vertical-align: bottom;
+    border-bottom: 2px solid $dark-color;
+}
+
+.products .collapse table :where(th,td){
+    border-bottom: 1px solid $border-color;
+    padding-left: 2em;
+}
+
+.products .collapse .has-child .content{
+    display: none;
+}
+.products .collapse .has-child.expand .content{
+    display: grid;
+}
+
+.products .collapse .has-child.expand a::before{
+    content: '-';
+}
+.products .collapse .has-child.expand  a.secondary-button::before{
+    content: '';
+}
+.products .collapse .has-child.expand  .second-links a::before{
+    content: '';
+}
+
+.products .reviews h4{
+    font-size: 2em;
+    color: $light-text-color;
+    padding-top: 1em;
+    margin: 1em 0 0.5em;
+    border-top: 1px solid $border-color;
+}
+
+.products .review-block{
+    color: initial;
+}
+
+.products .review-block-head > a{
+    display: block;
+    font-size: 1.25em;
+    width: 100%;
+    margin-top: 1em;
+    text-align: center;
+}
+
+.products .review-block-head .rate-sum{
+    position: relative;
+    font-size: 4em;
+    font-weight: $fw7;
+    padding-right: 0.5em;
+}
+
+.products .review-block-head .rate-sum::before{
+    content: '';
+    width: 2px;
+    height: 50px;
+    display: block;
+    position: absolute;
+    top: 10px;
+    right: 13px;
+    transform: rotate(22deg);
+    background-color: $light-bg-color;
+}
+
+.products .review-block-body .item{
+    gap: 1em;
+    margin-top: 3.5em;
+    padding-bottom: 2.5em;
+}
+
+.products .review-block-body :where(.person, .review-title){
+    font-weight: $fw7;
+    text-transform: uppercase;
+}
+
+.products .review-block-body :where(.review-title , .view-all){
+    font-size: 1.25em;
+    justify-content: flex-end;
+}
+
+.products .has-child a .mini-text{
+    padding-left: 10px;
+    font-size: 14px;
+}

@@ -1,21 +1,19 @@
 // responsive
 
 @media screen and (min-width:481px) {
-    .products.main .item{
-        flex: 0 0 50%;
-    }
-
+    // .products.main .item{
+    //     flex: 0 0 50%;
+    // }
     // single page
-    .products.one .big-image{
-        margin-bottom: 2em;
-    }
-    .products.one .image-show{
-        height: 680px;
-    }
-
-    .products.one .small-image .thumbnail-show img{
-        height: 160px;
-    } 
+    // .products.one .big-image{
+    //     margin-bottom: 2em;
+    // }
+    // .products.one .image-show{
+    //     height: 680px;
+    // }
+    // .products.one .small-image .thumbnail-show img{
+    //     height: 160px;
+    // } 
 }
 
 
